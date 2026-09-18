@@ -18,14 +18,35 @@ figcaption{font-size:19px;font-weight:bold;padding:10px}
 .lightbox.open{display:flex}.lightbox img{max-width:96vw;max-height:94vh;object-fit:contain;background:white}
 .close{position:fixed;right:24px;top:14px;border:0;background:transparent;color:#fff;font-size:58px;cursor:pointer}
 @media(max-width:850px){.trio{grid-template-columns:1fr}.zoom img{height:auto;max-height:80vh}.nav a{display:inline-block;margin:6px}}
-</style></head><body>
+</style>
+<style>
+/* Polished presentation for the existing center portrait only */
+.trump-polished{
+  background:linear-gradient(145deg,#e9d7a5,#b58a3c 45%,#f1dfaa);
+  padding:8px;
+  border:2px solid #6e4b16;
+  border-radius:8px;
+  box-shadow:0 10px 28px rgba(0,0,0,.38), inset 0 0 0 2px rgba(255,244,190,.55);
+}
+.trump-polished img{
+  display:block;
+  width:100%;
+  height:610px;
+  object-fit:contain;
+  object-position:center;
+  background:#111;
+  border-radius:3px;
+}
+</style>
+
+</head><body>
 <div class="nav"><a href="index.html">Home</a><a href="story.html">Story</a><a href="bible-verses.html">Bible Verses</a><a href="gallery.html">Gallery</a></div>
 <main class="page"><div class="paper">
 <h1>Trump &amp; Response</h1>
 <p class="note">Click any of the three images to make it full-screen size.</p>
 <div class="trio">
 <figure><button class="zoom" data-full="Marys-Letter-to-President-Trump.png"><img src="Marys-Letter-to-President-Trump.png" alt="Mary's letter"></button><figcaption>Mary’s Letter — Click to Enlarge</figcaption></figure>
-<figure><button class="zoom" data-full="Trump_Portrait_Drum_Protocol.png"><img src="Trump_Portrait_Drum_Protocol.png" alt="Portrait"></button><figcaption>Portrait — Click to Enlarge</figcaption></figure>
+<figure><button class="zoom" data-full="Trump_Portrait_Drum_Protocol.png"><div class="trump-polished"><img src="Trump_Portrait_Drum_Protocol.png" alt="Portrait"></div></button><figcaption>Portrait — Click to Enlarge</figcaption></figure>
 <figure><button class="zoom" data-full="Trump-Response-Letter.jpg"><img src="Trump-Response-Letter.jpg" alt="Response letter"></button><figcaption>Response Letter — Click to Enlarge</figcaption></figure>
 </div></div></main>
 <div id="lightbox" class="lightbox"><button class="close" aria-label="Close">×</button><img id="big" alt=""></div>

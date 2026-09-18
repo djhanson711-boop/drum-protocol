@@ -7,7 +7,7 @@
 h1{text-align:center;font-style:italic;color:#533411;font-size:42px;margin:0 0 24px}
 .letter{font-size:18px;line-height:1.55;max-width:900px;margin:auto}.signature{text-align:right;font-style:italic;font-size:24px}
 .heroimg{display:block;width:100%;max-width:920px;margin:0 auto;border:8px double #8b5c1b}
-.gallerygrid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:24px}.gallerygrid img{width:100%;height:260px;object-fit:cover;border:6px double #8b5c1b;background:#ead09b;padding:4px;cursor:zoom-in;transition:transform .15s ease}.gallerygrid img:hover{transform:scale(1.02)}
+.gallerygrid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:24px}.gallerygrid a{display:block;text-decoration:none}.gallerygrid img{width:100%;height:260px;object-fit:cover;border:6px double #8b5c1b;background:#ead09b;padding:4px;cursor:zoom-in;transition:transform .15s ease}.gallerygrid img:hover{transform:scale(1.02)}
 .trio{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.trio figure{margin:0;border:7px double #8b5c1b;background:#ead09b;padding:8px}.trio img{width:100%;display:block}.trio figcaption{text-align:center;font-weight:bold;padding:8px}
 
 .lightbox{display:none;position:fixed;z-index:9999;inset:0;background:rgba(0,0,0,.92);align-items:center;justify-content:center;padding:28px}
@@ -16,6 +16,14 @@ h1{text-align:center;font-style:italic;color:#533411;font-size:42px;margin:0 0 2
 .lightbox .close{position:fixed;top:14px;right:24px;color:white;font:46px/1 Arial,sans-serif;cursor:pointer;background:none;border:0}
 
 @media(max-width:800px){.gallerygrid,.trio{grid-template-columns:1fr}.nav a{display:inline-block;margin:6px}.document{padding:24px 18px}}
+
+.gallerygrid .photo-button{display:block;width:100%;margin:0;padding:0;border:0;background:transparent;cursor:zoom-in}
+.gallerygrid .photo-button img{display:block;width:100%}
+.photo-modal{display:none;position:fixed;inset:0;z-index:99999;background:rgba(0,0,0,.94);padding:24px;align-items:center;justify-content:center}
+.photo-modal:target{display:flex}
+.photo-modal img{display:block;max-width:94vw;max-height:90vh;width:auto;height:auto;object-fit:contain;border:5px solid #d6ad55;box-shadow:0 0 35px #000}
+.photo-modal-close{position:fixed;top:12px;right:22px;color:#fff;font:48px/1 Arial,sans-serif;text-decoration:none;z-index:100000}
+
 </style></head><body><div class="nav">
 <a href="index.html">Home</a>
 <a href="Drum-Protocol-Sheet-Music.pdf" target="_blank">Music</a>
@@ -28,32 +36,13 @@ h1{text-align:center;font-style:italic;color:#533411;font-size:42px;margin:0 0 2
 <a href="bible-verses.html">Bible Verses</a>
 </div><main class="page"><div class="document"><h1>Gallery</h1>
 
-<div class="gallerygrid" id="galleryGrid"><img src="Patriotic-Eagle.png" alt="Gallery image"><img src="Drum-Protocol-About.png" alt="Gallery image"><img src="Drum-Protocol-Three-Drummers.png" alt="Gallery image"><img src="Revolutionary-Prayer.png" alt="Gallery image"><img src="Marys-Letter-to-President-Trump.png" alt="Gallery image"><img src="Trump-Response-Letter.jpg" alt="Gallery image"><img src="Trump_Portrait_Drum_Protocol.png" alt="Gallery image"></div></div></main>
-<div class="lightbox" id="lightbox" aria-hidden="true">
-<button class="close" id="closeLightbox" aria-label="Close enlarged image">&times;</button>
-<img id="lightboxImage" alt="Enlarged gallery image">
-</div>
-<script>
-(function(){
-  const box=document.getElementById('lightbox');
-  const big=document.getElementById('lightboxImage');
-  const close=document.getElementById('closeLightbox');
-  document.querySelectorAll('#galleryGrid img').forEach(function(img){
-    img.setAttribute('tabindex','0');
-    img.setAttribute('title','Click to enlarge');
-    function openImage(){
-      big.src=img.src;
-      big.alt=img.alt || 'Enlarged gallery image';
-      box.classList.add('open');
-      box.setAttribute('aria-hidden','false');
-    }
-    img.addEventListener('click',openImage);
-    img.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();openImage();}});
-  });
-  function shut(){box.classList.remove('open');box.setAttribute('aria-hidden','true');big.src='';}
-  close.addEventListener('click',shut);
-  box.addEventListener('click',function(e){if(e.target===box)shut();});
-  document.addEventListener('keydown',function(e){if(e.key==='Escape')shut();});
-})();
-</script>
+<div id="gallery" class="gallerygrid"><a class="photo-button" href="#photo1" aria-label="Enlarge Gallery image"><img src="Patriotic-Eagle.png" alt="Gallery image"></a><a class="photo-button" href="#photo2" aria-label="Enlarge Gallery image"><img src="Drum-Protocol-About.png" alt="Gallery image"></a><a class="photo-button" href="#photo3" aria-label="Enlarge Gallery image"><img src="Drum-Protocol-Three-Drummers.png" alt="Gallery image"></a><a class="photo-button" href="#photo4" aria-label="Enlarge Gallery image"><img src="Revolutionary-Prayer.png" alt="Gallery image"></a><a class="photo-button" href="#photo5" aria-label="Enlarge Gallery image"><img src="Marys-Letter-to-President-Trump.png" alt="Gallery image"></a><a class="photo-button" href="#photo6" aria-label="Enlarge Gallery image"><img src="Trump-Response-Letter.jpg" alt="Gallery image"></a><a class="photo-button" href="#photo7" aria-label="Enlarge Gallery image"><img src="Trump_Portrait_Drum_Protocol.png" alt="Gallery image"></a></div></div></main>
+
+<div class="photo-modal" id="photo1"><a class="photo-modal-close" href="#gallery" aria-label="Close enlarged photo">&times;</a><a href="#gallery" aria-label="Close enlarged photo"><img src="Patriotic-Eagle.png" alt="Enlarge Gallery image"></a></div>
+<div class="photo-modal" id="photo2"><a class="photo-modal-close" href="#gallery" aria-label="Close enlarged photo">&times;</a><a href="#gallery" aria-label="Close enlarged photo"><img src="Drum-Protocol-About.png" alt="Enlarge Gallery image"></a></div>
+<div class="photo-modal" id="photo3"><a class="photo-modal-close" href="#gallery" aria-label="Close enlarged photo">&times;</a><a href="#gallery" aria-label="Close enlarged photo"><img src="Drum-Protocol-Three-Drummers.png" alt="Enlarge Gallery image"></a></div>
+<div class="photo-modal" id="photo4"><a class="photo-modal-close" href="#gallery" aria-label="Close enlarged photo">&times;</a><a href="#gallery" aria-label="Close enlarged photo"><img src="Revolutionary-Prayer.png" alt="Enlarge Gallery image"></a></div>
+<div class="photo-modal" id="photo5"><a class="photo-modal-close" href="#gallery" aria-label="Close enlarged photo">&times;</a><a href="#gallery" aria-label="Close enlarged photo"><img src="Marys-Letter-to-President-Trump.png" alt="Enlarge Gallery image"></a></div>
+<div class="photo-modal" id="photo6"><a class="photo-modal-close" href="#gallery" aria-label="Close enlarged photo">&times;</a><a href="#gallery" aria-label="Close enlarged photo"><img src="Trump-Response-Letter.jpg" alt="Enlarge Gallery image"></a></div>
+<div class="photo-modal" id="photo7"><a class="photo-modal-close" href="#gallery" aria-label="Close enlarged photo">&times;</a><a href="#gallery" aria-label="Close enlarged photo"><img src="Trump_Portrait_Drum_Protocol.png" alt="Enlarge Gallery image"></a></div>
 </body></html>
