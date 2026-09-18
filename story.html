@@ -11,7 +11,23 @@ html,body{margin:0;background:#071b39}
 position:absolute;left:78.5%;top:70.4%;width:17%;height:3.2%;
 z-index:50;display:block;cursor:zoom-in;
 }
-</style></head><body>
+</style>
+<style>
+.story-letter-enlarge-active{
+  position:absolute;
+  left:78.0%;
+  top:69.3%;
+  width:18.5%;
+  height:5.2%;
+  display:block;
+  z-index:99999;
+  cursor:zoom-in;
+  background:transparent;
+  pointer-events:auto;
+}
+</style>
+
+</head><body>
 <div class="page">
 <img src="Story-Gold-Links-Only.png" alt="The Story of Drum Protocol">
 
@@ -32,5 +48,13 @@ z-index:50;display:block;cursor:zoom-in;
 
 <!-- Letter button remains separate and opens the letter -->
 
-</div><a class="mary-letter-hotspot" href="Marys-Letter-to-President-Trump.png" target="_blank" rel="noopener" aria-label="Click to enlarge Mary Hanson letter to President Trump" title="Click to Enlarge"></a>
+</div>
+
+<a class="story-letter-enlarge-active"
+   href="Marys-Letter-to-President-Trump.png"
+   target="_blank"
+   rel="noopener noreferrer"
+   aria-label="Click to enlarge the letter to President Trump"
+   title="Click to Enlarge"></a>
+
 </body></html>
