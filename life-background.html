@@ -3,28 +3,98 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>My Life &amp; Background — Drum Protocol</title>
+<title>My Life &amp; Background | Drum Protocol</title>
 <style>
 *{box-sizing:border-box}
-html,body{margin:0;width:100%;min-height:100%;background:#050505}
-body{min-height:100vh;display:flex;align-items:center;justify-content:center;overflow:auto}
-.page{width:100vw;min-height:100vh;display:flex;align-items:center;justify-content:center}
-.page img{
-  display:block;
-  width:100vw;
-  height:100vh;
-  object-fit:contain;
-  object-position:center;
+html,body{margin:0;min-height:100%;background:#071427}
+body{
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:28px;
+  font-family:Georgia,"Times New Roman",serif;
+  color:#24180b;
 }
-@media (max-width:700px){
-  body,.page{min-height:auto}
-  .page img{width:100vw;height:auto;min-height:100vh;object-fit:contain}
+.frame{
+  width:min(1100px,96vw);
+  min-height:min(760px,92vh);
+  padding:12px;
+  border:3px solid #d5ad50;
+  outline:5px double #7a551d;
+  background:#0b1d38;
+  box-shadow:0 14px 40px rgba(0,0,0,.55);
+}
+.page{
+  min-height:720px;
+  padding:58px 70px;
+  border:5px double #9a6a22;
+  background:
+    radial-gradient(circle at 50% 25%,rgba(255,255,255,.35),transparent 35%),
+    linear-gradient(135deg,#f2dfad,#d9b96e 52%,#eed79a);
+  position:relative;
+}
+.page:before,.page:after{
+  content:"♪ ♫";
+  position:absolute;
+  color:#77531e;
+  opacity:.28;
+  font-size:76px;
+}
+.page:before{left:30px;top:28px}
+.page:after{right:30px;bottom:25px;transform:rotate(12deg)}
+h1{
+  margin:0 0 45px;
+  text-align:center;
+  color:#53340e;
+  font-size:clamp(38px,5vw,68px);
+  line-height:1.05;
+  text-shadow:0 1px #fff1bd;
+}
+.copy{
+  max-width:780px;
+  margin:0 auto;
+  font-size:clamp(25px,2.5vw,36px);
+  line-height:1.55;
+  text-align:center;
+}
+.signature{
+  margin-top:42px;
+  text-align:right;
+  font-size:clamp(28px,3vw,42px);
+  font-style:italic;
+  color:#53340e;
+}
+.home{
+  display:block;
+  width:max-content;
+  margin:46px auto 0;
+  padding:11px 22px;
+  border:2px solid #7b531a;
+  background:#10274a;
+  color:#f4d67c;
+  text-decoration:none;
+  font-weight:bold;
+  font-size:18px;
+}
+@media(max-width:650px){
+  body{padding:12px}
+  .page{padding:42px 22px;min-height:auto}
+  .copy{text-align:left}
 }
 </style>
 </head>
 <body>
-<main class="page">
-<img src="Life-Background-Full-Page.jpg" alt="My Life and Background">
-</main>
+<div class="frame">
+  <main class="page">
+    <h1>My Life &amp; Background</h1>
+    <div class="copy">
+      I come from a music and religious family.<br><br>
+      Music and faith have both been important parts of my life and helped shape the way I understand the purpose and message of <em>Drum Protocol</em>.
+    </div>
+    <div class="signature">— Mary M. Hanson</div>
+    <a class="home" href="index.html">Return to Home</a>
+  </main>
+</div>
 </body>
 </html>
