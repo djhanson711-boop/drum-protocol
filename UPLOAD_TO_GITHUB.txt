@@ -1,0 +1,16 @@
+DRUM PROTOCOL — FINISHED DESIGN VERSION
+
+1. Unzip this ZIP on your Mac.
+2. Open the unzipped folder.
+3. Select EVERYTHING INSIDE the folder (Command + A).
+4. In GitHub, open the drum-protocol repository.
+5. Choose Add file > Upload files.
+6. Drag the selected FILES into GitHub. Do NOT drag the containing folder.
+7. Choose 'Commit directly to the main branch'.
+8. Click Commit changes.
+9. Wait 1–3 minutes, then refresh:
+   https://djhanson711-boop.github.io/drum-protocol/
+
+IMPORTANT:
+The homepage file is index.html and the finished design image is
+Drum-Protocol-Finished-Homepage.png.
