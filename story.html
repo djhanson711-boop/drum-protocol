@@ -12,33 +12,41 @@ position:absolute;left:78.5%;top:70.4%;width:17%;height:3.2%;
 z-index:50;display:block;cursor:zoom-in;
 }
 </style>
-<style>
-.story-letter-enlarge-active{
-  position:absolute;
-  left:78.0%;
-  top:69.3%;
-  width:18.5%;
-  height:5.2%;
-  display:block;
-  z-index:99999;
-  cursor:zoom-in;
-  background:transparent;
-  pointer-events:auto;
-}
-</style>
+
+
+
+
 
 
 <style>
-.story-fixed-link{
-  position:absolute !important;
-  display:block !important;
-  z-index:2147483647 !important;
-  pointer-events:auto !important;
-  cursor:pointer !important;
-  background:rgba(0,0,0,0) !important;
+.real-blue-enlarge{
+ position:absolute;
+ left:78.1%;
+ top:73.45%;
+ width:18.3%;
+ height:3.45%;
+ z-index:2147483647;
+ display:flex;
+ align-items:center;
+ justify-content:center;
+ box-sizing:border-box;
+ background:linear-gradient(#183d77,#082552);
+ border:2px solid #d6b45d;
+ border-radius:3px;
+ color:#fff;
+ font-family:Georgia,"Times New Roman",serif;
+ font-weight:bold;
+ font-size:clamp(7px,1.05vw,13px);
+ line-height:1;
+ text-decoration:none;
+ text-shadow:0 1px 1px #000;
+ cursor:pointer;
+ pointer-events:auto;
 }
-.story-contact-fixed{left:79.8%;top:2.2%;width:10.8%;height:4.8%}
-.story-enlarge-fixed{left:77.5%;top:68.2%;width:19.5%;height:6.5%;cursor:zoom-in !important}
+.real-blue-enlarge:hover{
+ filter:brightness(1.18);
+ text-decoration:underline;
+}
 </style>
 
 </head><body>
@@ -53,27 +61,29 @@ z-index:50;display:block;cursor:zoom-in;
 <a class="hot" href="life-background.html" style="left:43%;top:0;width:19%;height:5.7%" aria-label="My Life and Background"></a>
 <a class="hot" href="gallery.html" style="left:62%;top:0;width:8%;height:5.7%" aria-label="Gallery"></a>
 <a class="hot" href="bible-verses.html" style="left:70%;top:0;width:12%;height:5.7%" aria-label="Bible Verses"></a>
-<a class="hot" href="mailto:djhanson711@gmail.com" style="left:82%;top:0;width:10%;height:5.7%" aria-label="Contact"></a>
+<a class="hot" href="contact.html" style="left:92.5%;top:0;width:7.5%;height:5.7%;z-index:9999" aria-label="Contact"></a>
 
 <!-- THIS is the Bible Verses CLICK HERE under the praying man -->
 <a class="hot" href="bible-verses.html"
    style="left:80.7%;top:52.4%;width:12.5%;height:3.4%"
    aria-label="Click here for Bible Verses"></a>
 
-<!-- Letter button remains separate and opens the letter -->
+<!-- Actual clickable blue button over the visible CLICK TO ENLARGE button -->
+
+<a href="Marys-Letter-to-President-Trump.png"
+   class="real-blue-enlarge"
+   aria-label="Click to enlarge My Letter to President Trump">CLICK TO ENLARGE</a>
+
+
+
+
 
 </div>
 
 
 
 
-<a class="story-fixed-link story-contact-fixed"
-   href="contact.html"
-   aria-label="Contact"
-   title="Contact"></a>
-<a class="story-fixed-link story-enlarge-fixed"
-   href="Marys-Letter-to-President-Trump.png"
-   aria-label="Click to enlarge letter"
-   title="Click to Enlarge"></a>
+
+
 
 </body></html>
