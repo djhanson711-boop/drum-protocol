@@ -5,34 +5,52 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Story — Drum Protocol</title>
 <style>
-html,body{margin:0;background:#071b39}
-.page{position:relative;max-width:1225px;margin:0 auto}
-.page img{display:block;width:100%;height:auto}
+*{box-sizing:border-box}
+html,body{margin:0;background:#071b39;font-family:Georgia,"Times New Roman",serif}
+.wrap{max-width:1225px;margin:0 auto}
+.topnav{
+ display:flex;align-items:center;justify-content:space-between;gap:10px;
+ width:100%;padding:0 18px;height:76px;
+ background:#efd49a;border:3px solid #a36c19;
+ white-space:nowrap;
+}
+.topnav a{color:#3b260d;text-decoration:none;font-weight:bold;font-size:18px}
+.topnav a:hover{text-decoration:underline}
+.art{position:relative;width:100%;overflow:hidden}
+.art img{
+ display:block;width:100%;height:auto;
+ margin-top:-78px; /* removes the old baked-in nav strip */
+}
 .hot{position:absolute;display:block;z-index:100;background:transparent;cursor:pointer}
+
+/* Coordinates below are relative to the visible artwork after the old nav is cropped. */
+.bible{left:81.0%;top:51.9%;width:12.3%;height:3.0%;z-index:9999}
+.letter{left:78.4%;top:70.8%;width:16.7%;height:3.1%;z-index:9999;cursor:zoom-in}
+
+@media(max-width:950px){
+ .topnav{height:auto;min-height:76px;flex-wrap:wrap;justify-content:center;padding:12px 16px}
+ .topnav a{font-size:16px}
+ .art img{margin-top:-78px}
+}
 </style>
 </head>
 <body>
-<div class="page">
+<div class="wrap">
+<nav class="topnav">
+<a href="index.html">Home</a>
+<a href="about.html">About the Song</a>
+<a href="drummers.html">Drummers</a>
+<a href="trump-response.html">Trump &amp; Response</a>
+<a href="life-background.html">My Life &amp; Background</a>
+<a href="gallery.html">Gallery</a>
+<a href="bible-verses.html">Bible Verses</a>
+<a href="contact.html">Contact</a>
+</nav>
+<div class="art">
 <img src="Story-Gold-Links-Only.png" alt="The Story of Drum Protocol">
-
-<a class="hot" href="index.html" style="left:1%;top:0;width:6%;height:5.7%" aria-label="Home"></a>
-<a class="hot" href="about.html" style="left:7%;top:0;width:12%;height:5.7%" aria-label="About the Song"></a>
-<a class="hot" href="drummers.html" style="left:19%;top:0;width:9%;height:5.7%" aria-label="Drummers"></a>
-<a class="hot" href="trump-response.html" style="left:28%;top:0;width:15%;height:5.7%" aria-label="Trump and Response"></a>
-<a class="hot" href="life-background.html" style="left:43%;top:0;width:19%;height:5.7%" aria-label="My Life and Background"></a>
-<a class="hot" href="gallery.html" style="left:62%;top:0;width:8%;height:5.7%" aria-label="Gallery"></a>
-<a class="hot" href="bible-verses.html" style="left:70%;top:0;width:13%;height:5.7%" aria-label="Bible Verses"></a>
-<a class="hot" href="contact.html" style="left:92.5%;top:0;width:7.5%;height:5.7%" aria-label="Contact"></a>
-
-<!-- Invisible link exactly over ORIGINAL Bible Verses blue CLICK HERE -->
-<a class="hot" href="bible-verses.html"
-   style="left:81.0%;top:54.7%;width:12.3%;height:2.8%;z-index:9999"
-   aria-label="Bible Verses Click Here"></a>
-
-<!-- Invisible link exactly over ORIGINAL My Letter blue CLICK TO ENLARGE -->
-<a class="hot" href="Marys-Letter-to-President-Trump.png"
-   style="left:78.4%;top:72.6%;width:16.7%;height:2.9%;z-index:9999;cursor:zoom-in"
-   aria-label="Click to Enlarge My Letter to President Trump"></a>
+<a class="hot bible" href="bible-verses.html" aria-label="Bible Verses Click Here"></a>
+<a class="hot letter" href="Marys-Letter-to-President-Trump.png" aria-label="Click to Enlarge My Letter to President Trump"></a>
+</div>
 </div>
 </body>
 </html>
