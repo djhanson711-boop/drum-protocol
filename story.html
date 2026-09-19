@@ -27,6 +27,20 @@ z-index:50;display:block;cursor:zoom-in;
 }
 </style>
 
+
+<style>
+.story-fixed-link{
+  position:absolute !important;
+  display:block !important;
+  z-index:2147483647 !important;
+  pointer-events:auto !important;
+  cursor:pointer !important;
+  background:rgba(0,0,0,0) !important;
+}
+.story-contact-fixed{left:79.8%;top:2.2%;width:10.8%;height:4.8%}
+.story-enlarge-fixed{left:77.5%;top:68.2%;width:19.5%;height:6.5%;cursor:zoom-in !important}
+</style>
+
 </head><body>
 <div class="page">
 <img src="Story-Gold-Links-Only.png" alt="The Story of Drum Protocol">
@@ -50,11 +64,16 @@ z-index:50;display:block;cursor:zoom-in;
 
 </div>
 
-<a class="story-letter-enlarge-active"
+
+
+
+<a class="story-fixed-link story-contact-fixed"
+   href="contact.html"
+   aria-label="Contact"
+   title="Contact"></a>
+<a class="story-fixed-link story-enlarge-fixed"
    href="Marys-Letter-to-President-Trump.png"
-   target="_blank"
-   rel="noopener noreferrer"
-   aria-label="Click to enlarge the letter to President Trump"
+   aria-label="Click to enlarge letter"
    title="Click to Enlarge"></a>
 
 </body></html>
