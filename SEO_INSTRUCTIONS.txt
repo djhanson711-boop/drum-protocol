@@ -1,0 +1,5 @@
+DRUM PROTOCOL — GOOGLE SEARCH UPDATE
+
+Upload the CONTENTS of this ZIP to the root of your GitHub repository, replacing the existing files with the same names. Do not upload the ZIP itself. The visual homepage is preserved, with a small descriptive text section added beneath it so Google can read what the song is about. All other pages retain their existing visible design.
+
+After GitHub Pages publishes the changes, use Google Search Console > URL inspection > Request indexing for https://djhanson711-boop.github.io/drum-protocol/ . Google controls ranking; indexing does not guarantee top placement.
