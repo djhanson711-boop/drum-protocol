@@ -1,3 +1,95 @@
-<!DOCTYPE html>
-<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><title>The Story Behind the Song | Drum Protocol</title><style>
-*{box-sizing:border-box}body{margin:0;background:#07172a;color:#f7e9c9;font-family:Georgia,serif}nav{display:flex;gap:18px;flex-wrap:wrap;justify-content:center;padding:16px;background:#07101e}nav a{color:#f6d796}h1{text-align:center;color:#f4d38a;font-weight:normal}.art{display:block;width:100%;height:auto}.intro{text-align:center;padding:12px 20px}.content{display:grid;grid-template-columns:minmax(0,1.65fr) minmax(320px,1fr);gap:22px;padding:20px;align-items:start;max-width:1600px;margin:auto}.letter{color:#382313;padding:34px 38px;background:#e8cf9c;border:10px ridge #ac7a3e;box-shadow:0 8px 30px #0008;font-size:clamp(15px,1.3vw,20px);line-height:1.6}.letter p{margin:0 0 1em}.prayer{padding:30px;color:#ffe4aa;background:#061a34;border:8px double #d8ac55;box-shadow:0 8px 30px #0008;text-align:center;font-size:clamp(18px,1.5vw,24px);line-height:1.7}.prayer h2{color:#f4cb73;font-weight:normal}.prayer p{margin:0 0 1.1em}@media(max-width:700px){.content{grid-template-columns:1fr;padding:10px}.letter,.prayer{padding:18px}}</style><style>.artwrap{position:relative;width:100%;margin:0 auto}.hotspot{position:absolute;border:2px solid transparent;background:transparent;cursor:zoom-in;border-radius:12px;display:flex;align-items:flex-end;justify-content:center;padding:0 0 3%;color:#fff;font:600 clamp(11px,1.3vw,18px) Georgia,serif}.hotspot span{background:#07172add;border:1px solid #eac26e;border-radius:30px;padding:9px 15px;box-shadow:0 2px 14px #0009}.hotspot:hover,.hotspot:focus-visible{outline:none;border-color:#ffe09b;background:#ffe09b18}.hotspot:hover span,.hotspot:focus-visible span{background:#a06d22}.letterspot{left:2%;top:17%;width:55%;height:73%}.prayerspot{left:59%;top:24%;width:36%;height:67%}.lightbox[hidden]{display:none}.lightbox{position:fixed;inset:0;z-index:1000;background:#020915ed;display:flex;align-items:center;justify-content:center;flex-direction:column;padding:55px 14px 15px}.largewrap{width:min(90vw,82vh,850px);height:min(90vw,82vh,850px);display:flex;align-items:center;justify-content:center;overflow:hidden;box-shadow:0 12px 45px #000;border:3px solid #dfb76c;background:#07172a}.largewrap img{display:block;width:100%;height:100%;object-fit:contain}.lightbox .close{position:absolute;top:12px;right:18px;background:#d6ad5c;color:#07172a;border:0;border-radius:8px;padding:10px 16px;font:bold 16px Georgia;cursor:pointer}.lightbox p{margin:10px 0;color:#f8db98;text-align:center;font-size:13px}@media(max-width:700px){.flaglabel{font-size:10px;padding:5px 7px}.largewrap{width:94vw;height:min(94vw,78vh)}}.hotspot{font-size:0}.hotspot:hover,.hotspot:focus-visible{border-color:#ffe09b66;background:#ffe09b08}.flaglabel{position:absolute;top:93%;z-index:3;transform:translateX(-50%);background:#07172ae8;border:1px solid #eac26e;color:white;border-radius:30px;padding:8px 14px;font:600 clamp(10px,1.1vw,16px) Georgia,serif;box-shadow:0 2px 14px #0009;pointer-events:auto;cursor:zoom-in;white-space:nowrap}.flagletter{left:32%;transform:none}.flagprayer{left:75%}</style></head><body><nav><a href="index.html">Home</a><a href="about.html">About the Song</a><a href="drummers.html">Drummers</a><a href="gallery.html">Gallery</a><a href="bible-verses.html">Bible Verses</a><a href="contact.html">Contact</a></nav><main class="artwrap"><img alt="Patriotic September 11 memorial design with a vintage letter on the left and a framed prayer on the right" class="art" src="Drum-Protocol-Approved-911-Design.png"/><button class="hotspot letterspot" aria-label="Enlarge the letter from Mary M. Hanson" onclick="showLarge('Story-Letter-Enlarged.png','Letter from Mary M. Hanson')"></button><button class="hotspot prayerspot" aria-label="Enlarge A Prayer for America" onclick="showLarge('Story-Prayer-Enlarged.png','A Prayer for America')"></button><button type="button" class="flaglabel flagletter" onclick="showLarge('Story-Letter-Enlarged.png','Letter from Mary M. Hanson')">Click to enlarge letter ⤢</button><button type="button" class="flaglabel flagprayer" onclick="showLarge('Story-Prayer-Enlarged.png','A Prayer for America')">Click to enlarge prayer ⤢</button></main><div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Enlarged letter or prayer" hidden onclick="if(event.target===this)closeLarge()"><button class="close" onclick="closeLarge()" aria-label="Close enlarged view">✕ Close</button><div class="largewrap"><img id="largeimage" alt=""/></div><p>Click outside the picture or press Escape to close</p></div><script>function showLarge(src,alt){let d=document.getElementById('lightbox'),i=document.getElementById('largeimage');i.src=src;i.alt=alt;d.hidden=false;document.body.style.overflow='hidden';d.querySelector('.close').focus()}function closeLarge(){document.getElementById('lightbox').hidden=true;document.body.style.overflow=''}document.addEventListener('keydown',e=>{if(e.key==='Escape')closeLarge()});</script></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>The Story Behind the Song — Drum Protocol</title>
+<style>
+*{box-sizing:border-box}
+html,body{margin:0;background:#061a39;color:#10284b;font-family:Georgia,"Times New Roman",serif}
+nav{background:#071c3c;border-top:3px solid #d6a43b;border-bottom:3px solid #d6a43b;text-align:center;padding:13px 8px}
+nav a{color:#f8dfa0;text-decoration:none;font-weight:bold;margin:0 13px;font-size:17px}
+.hero{max-width:1120px;margin:22px auto 0;border:5px double #d6a43b;background:
+linear-gradient(90deg,rgba(3,18,46,.94),rgba(75,11,25,.72),rgba(3,18,46,.94)),
+url("September-11-Twin-Towers.jpg") center 47%/cover no-repeat;
+min-height:285px;display:flex;align-items:center;justify-content:center;text-align:center;padding:28px}
+.hero h1{margin:0;color:#f7d887;font-size:58px;line-height:.95;text-shadow:0 3px 4px #000}
+.hero .script{font-style:italic;font-size:38px;font-weight:normal}
+.hero p{color:#fff1c9;font-size:18px;letter-spacing:1px}
+.paper{max-width:1120px;margin:18px auto 34px;padding:58px 70px;
+background:
+linear-gradient(rgba(255,246,214,.92),rgba(244,220,162,.94)),
+radial-gradient(circle at 20% 10%,#fff6d7,#e3bd72);
+border:9px double #b97a16;box-shadow:0 10px 30px #0009;position:relative}
+.paper:before,.paper:after{content:"★  ★  ★";display:block;text-align:center;color:#9b6814;letter-spacing:12px;font-size:18px}
+.paper h2{text-align:center;color:#75470b;font-size:42px;margin:20px 0 8px}
+.date{text-align:right;font-style:italic;color:#75470b}
+.paper p{font-size:19px;line-height:1.58;margin:17px 0}
+.prayer{margin:34px auto;padding:26px 32px;max-width:760px;text-align:center;border:3px double #b97a16;background:#fff4d3aa}
+.prayer h3{font-size:30px;color:#75470b;margin:0 0 18px}
+.closing{margin-top:28px}
+.signature{text-align:right;font-size:23px;font-style:italic;color:#75470b}
+footer{max-width:1120px;margin:0 auto 30px;text-align:center;color:#f7d887;font-style:italic;font-size:27px}
+@media(max-width:760px){
+ nav a{display:inline-block;margin:6px 8px}.hero{margin:10px}.hero h1{font-size:38px}.hero .script{font-size:28px}
+ .paper{margin:10px;padding:34px 24px}.paper h2{font-size:32px}.paper p{font-size:17px}
+}
+</style>
+</head>
+<body>
+<nav>
+<a href="index.html">Home</a>
+<a href="Drum-Protocol-Sheet-Music.pdf">Music</a>
+<a href="about.html">The Story</a>
+<a href="drummers.html">Drummers</a>
+<a href="trump-response.html">Trump &amp; Response</a>
+<a href="life-background.html">My Life &amp; Background</a>
+<a href="gallery.html">Gallery</a>
+<a href="bible-verses.html">Bible Verses</a>
+<a href="contact.html">Contact</a>
+</nav>
+
+<section class="hero">
+<div>
+<div class="script">The Story Behind the Song</div>
+<h1>DRUM PROTOCOL</h1>
+<p>A NATIONAL PATRIOTIC SONG FOR THE UNITED STATES OF AMERICA</p>
+<p>SEPTEMBER 11, 2001 — WE WILL NEVER FORGET</p>
+</div>
+</section>
+
+<article class="paper">
+<h2>The Story Behind the Song</h2>
+<p class="date">September 11, 2026</p>
+<p>Dear Fellow Americans,</p>
+
+<p>Drum Protocol is a national patriotic song written for the citizens of the United States of America. I composed the music in honor of my son who is a world-class drummer. The lyrics were written to honor the veterans of the United States of America.</p>
+
+<p>Drum Protocol was copyrighted at the turn of the century on December 29, 2000. It all came together around the time the twin towers at the New York Trade Center fell on September 11, 2001.</p>
+
+<p>I expected the recording my friends and family made of Drum Protocol to be produced back then. But God said, “LET IT SIT.” So the song sat. And it did so for the next 25 years, 5 months, and 30 days. When the Lord introduced the MP3 software to me, He then said, “PUBLISH IT!”</p>
+
+<p>The track “DJ-HANSON (DRUM PROTOCOL)” on YouTube was released to the public on June 28, 2026 by artists M.A.D., right in time to celebrate America’s 250th Fourth of July birthday celebration, 2026!</p>
+
+<p>The Puritans and the early American Revolutionaries practiced the active Christian virtues of energy, force, and perseverance when standing up for our freedom, which we all still enjoy today. That helped America grow into a great nation.</p>
+
+<p>If they could make our country great, we can use the same Christian principles to keep it that way. Our American Founding Fathers believed in the Bible and studied it. They knew how to stand on the power and faith of the Word of God. They also knew how to pray. Since they did, we can too. This short, quick prayer brings release every single time when said with a strong and grateful heart.</p>
+
+<div class="prayer">
+<h3>A Prayer for America</h3>
+<p>Our dear Heavenly Father,</p>
+<p>I raise my hands to Heaven, O Lord, in honor of<br>
+Your name, for power to stand against the evil,<br>
+and strength to cure the pain.</p>
+<p>In Jesus’ name, Amen.</p>
+</div>
+
+<div class="closing">
+<p>May God Bless America!</p>
+<p>Thank-you.</p>
+<p class="signature">Sincerely,<br>Mary M. Hanson</p>
+</div>
+</article>
+<footer>God Bless America</footer>
+</body>
+</html>
